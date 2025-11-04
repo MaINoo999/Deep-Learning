@@ -1,38 +1,73 @@
-DigitClassifier
-📌 프로젝트 소개
+# DigitClassifier - Android MNIST Handwritten Digit Classifier
 
-DigitClassifier는 Android 앱에서 MNIST 손글씨 숫자 이미지를 인식하고 분류하는 학습용 앱입니다.
-사용자는 앱 화면에 손글씨 숫자를 입력하면, 앱이 이를 인식하여 예측된 숫자를 보여줍니다.
+## 📌 프로젝트 소개
+DigitClassifier는 Android 앱에서 **손글씨 숫자(MNIST)를 인식**하는 간단한 머신러닝 앱입니다.  
+TensorFlow Lite를 이용해 **모바일 환경에서도 숫자 인식**이 가능하도록 설계되었습니다.
 
-주요 기능
+- Android Studio Arctic Fox 이상 권장
+- Kotlin + AndroidX 사용
+- TensorFlow Lite 기반 숫자 분류
 
-손글씨 숫자 입력 (AndroidDraw 라이브러리 활용)
+---
 
-TensorFlow Lite 모델을 통한 숫자 분류
+## 🛠 기능
+- 사용자가 화면에 손글씨 숫자 입력
+- 입력된 숫자를 TFLite 모델로 분류
+- 예측 결과를 화면에 표시
 
-AndroidX 기반 안정적인 UI 및 내비게이션
+---
 
-Kotlin + ViewBinding 사용
+## 📂 프로젝트 구조
+DigitClassifier/
+├─ app/ # 앱 모듈
+│ ├─ src/
+│ │ ├─ main/
+│ │ │ ├─ java/com/iot/android_minst/ # Kotlin 소스코드
+│ │ │ ├─ res/ # 레이아웃, 이미지 등
+│ │ │ └─ AndroidManifest.xml
+│ └─ build.gradle.kts # 앱 모듈 Gradle
+├─ build.gradle.kts # 프로젝트 Gradle
+├─ settings.gradle.kts
+├─ gradle.properties
+├─ README.md
+└─ .gitignore # 필요시 추가
 
-📌 준비 사항
+## ⚙️ 환경 설정
 
-Android Studio 설치
+### 1. Android Studio 설치
+- [Android Studio](https://developer.android.com/studio) 설치
+- SDK 36 이상
 
-Android Studio 공식 사이트
-에서 다운로드
+### 2. Gradle 설정
+프로젝트는 **Kotlin DSL**(`build.gradle.kts`) 사용  
+이미 설정된 repository:
+```kotlin
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+--------------------------------------------------------
+3. 의존성
+dependencies {
+    implementation("androidx.core:core-ktx:1.10.1")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
 
-설치 시 Android SDK, Kotlin 플러그인 포함 확인
+    implementation("com.github.divyanshub024:AndroidDraw:v0.1") // 손글씨 입력
 
-Git 설치
-
-GitHub에서 프로젝트를 클론하거나 Push할 때 필요
-
-Git 공식 사이트
-에서 설치
-
-JDK 11 설치
-
-Gradle과 Kotlin 설정을 위해 필요
-
-Adoptium JDK 11
- 추천
+    implementation("org.tensorflow:tensorflow-lite:2.14.0")     // TFLite
+}
