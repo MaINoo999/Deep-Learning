@@ -18,19 +18,22 @@ TensorFlow Lite를 이용해 **모바일 환경에서도 숫자 인식**이 가�
 ---
 
 ## 📂 프로젝트 구조
+
 DigitClassifier/
-├─ app/ # 앱 모듈
-│ ├─ src/
-│ │ ├─ main/
-│ │ │ ├─ java/com/iot/android_minst/ # Kotlin 소스코드
-│ │ │ ├─ res/ # 레이아웃, 이미지 등
-│ │ │ └─ AndroidManifest.xml
-│ └─ build.gradle.kts # 앱 모듈 Gradle
-├─ build.gradle.kts # 프로젝트 Gradle
+├─ app/                        # 앱 모듈
+│  ├─ src/
+│  │  ├─ main/
+│  │  │  ├─ java/
+│  │  │  │  └─ com/iot/android_minst/  # Kotlin 소스코드
+│  │  │  ├─ res/                        # 레이아웃, 이미지 등
+│  │  │  └─ AndroidManifest.xml
+│  └─ build.gradle.kts                 # 앱 모듈 Gradle
+├─ build.gradle.kts                     # 프로젝트 Gradle
 ├─ settings.gradle.kts
 ├─ gradle.properties
 ├─ README.md
-└─ .gitignore # 필요시 추가
+└─ .gitignore                          # 필요시 추가
+
 
 ## ⚙️ 환경 설정
 
