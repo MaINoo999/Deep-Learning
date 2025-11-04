@@ -7,10 +7,10 @@ TensorFlow Lite를 이용해 **모바일 환경에서도 숫자 인식**이 가�
 - Android Studio Arctic Fox 이상 권장
 - Kotlin + AndroidX 사용
 - TensorFlow Lite 기반 숫자 분류
-![시작화면](https://github.com/MaINoo999/Deep-Learning/blob/1e4bdbd3702c1310203c0d1a7251549c687c432f/image/start%20(2).png)
-![설명 텍스트](이미지_경로)
-![설명 텍스트](이미지_경로)
-![설명 텍스트](이미지_경로)
+![시작 화면](https://github.com/MaINoo999/Deep-Learning/blob/1e4bdbd3702c1310203c0d1a7251549c687c432f/image/start%20(2).png)
+![숫자 3 예측 화면](https://github.com/MaINoo999/Deep-Learning/blob/a3f06ccdfaec6562be6ceacfb0d1732fbb5bc99d/image/3.png)
+![숫자 4 예측 화면](https://github.com/MaINoo999/Deep-Learning/blob/a3f06ccdfaec6562be6ceacfb0d1732fbb5bc99d/image/4.png)
+![숫자 예측 영상](https://github.com/MaINoo999/Deep-Learning/blob/a3f06ccdfaec6562be6ceacfb0d1732fbb5bc99d/image/3%2C4.mp4)
 
 ---
 
